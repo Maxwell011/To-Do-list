@@ -1,12 +1,49 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
- <meta charset="UTF-8">
- <meta http-equiv="X-UA-Compatible" content="IE=edge">
- <meta name="viewport" content="width=device-width, initial-scale=1.0">
- <title>ToDo-List</title>
-<script defer src="main.js"></script></head>
-<body>
- <h1>Hello</h1>
-</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ToDo-List</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+      integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link
+      rel="stylesheet"
+      href="path/to/font-awesome/css/font-awesome.min.css"
+    />
+  <script defer src="main.js"></script></head>
+  <body>
+    <!-- Main Heading -->
+    <main>
+      <div class="body">
+        <div class="heading">
+          <h3>Today's To do</h3>
+          <span>
+            <i class="fa fa-refresh" aria-hidden="true"></i>
+          </span>
+        </div>
+        <hr />
+        <!-- end of heading -->
+        <div>
+          <input
+            type="text"
+            class="input-item"
+            id="add"
+            placeholder="Add to your list..."
+          />
+        </div>
+        <hr />
+        <div class="list-container"></div>
+        <div class="clear-all">
+          <button type="submit" class="clear-btn">Clear completed</button>
+        </div>
+      </div>
+    </main>
+    <script src="../dist/main.js"></script>
+  </body>
 </html>
