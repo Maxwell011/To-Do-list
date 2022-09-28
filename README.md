@@ -1,56 +1,51 @@
 ![](https://img.shields.io/badge/Microverse-blueviolet)
 
-# Project Name
+# TO DO LISTS
 
-> Description the project.
-
+> A Web application that lets the user add, remove and reorder to do lists
 
 ## Built With
 
-- Major languages
-- Frameworks
-- Technologies used
+- Html,JS,CSS
+- Webpack and other dependencies
+- Git, Github, linters
 
-## Live Demo (if available)
+## Setup
 
-[Live Demo Link](https://livedemo.com)
-
-
-## Getting Started
-
-**This is an example of how you may give instructions on setting up your project locally.**
-**Modify this file to match your project, remove sections that don't apply. For example: delete the testing section if the currect project doesn't require testing.**
-
-
-To get a local copy up and running follow these simple example steps.
-
-### Prerequisites
-
-### Setup
+To get a local copy up and running you'll need to have [NodeJS](https://nodejs.org/en/download/) installed on your local machine.
 
 ### Install
 
+After installing NodeJS please follow the next steps...
+
 ### Usage
 
-### Run tests
+```bash
 
-### Deployment
+npm i
 
+```
 
+-- for installing dev dependecies.
 
-## Authors
+```bash
 
-👤 **Author1**
+npm run build
 
-- GitHub: [@githubhandle](https://github.com/githubhandle)
-- Twitter: [@twitterhandle](https://twitter.com/twitterhandle)
-- LinkedIn: [LinkedIn](https://linkedin.com/in/linkedinhandle)
+```
 
-👤 **Author2**
+-- to run the project.
 
-- GitHub: [@githubhandle](https://github.com/githubhandle)
-- Twitter: [@twitterhandle](https://twitter.com/twitterhandle)
-- LinkedIn: [LinkedIn](https://linkedin.com/in/linkedinhandle)
+## Live Demo (Coming Soon)
+
+[Live Demo Link]()
+
+## Author
+
+👤 **Orji Maxwell**
+
+- GitHub: [@githubhandle](https://github.com/Maxwell011)
+- LinkedIn: [LinkedIn](https://www.linkedin.com/in/chukwuemeka-orji-50b766241/)
 
 ## 🤝 Contributing
 
@@ -64,12 +59,9 @@ Give a ⭐️ if you like this project!
 
 ## Acknowledgments
 
-- Hat tip to anyone whose code was used
-- Inspiration
+- minimalist website
 - etc
 
 ## 📝 License
 
-This project is [MIT](./LICENSE) licensed.
-
-_NOTE: we recommend using the [MIT license](https://choosealicense.com/licenses/mit/) - you can set it up quickly by [using templates available on GitHub](https://docs.github.com/en/communities/setting-up-your-project-for-healthy-contributions/adding-a-license-to-a-repository). You can also use [any other license](https://choosealicense.com/licenses/) if you wish._
+This project is [MIT](./MIT.md) licensed.
