@@ -65,8 +65,11 @@ document.addEventListener('change', (e) => {
 // Event Handler for the clearCompleted function
 const clearAll = document.querySelector('.clear-btn');
 clearAll.addEventListener('click', () => {
-  const taskStatus = document.querySelector('.checkTask');
-  if (taskStatus.checked === true) {
-    clearCompleted();
-  }
+  // const taskStatus = document.querySelector('.checkTask');
+  // const taskStatusArray = Array.from(taskStatus);
+  // taskStatusArray.forEach((task, index) => {
+  //   if (taskStatus.checked === true) {
+  clearCompleted();
+  //   }
+  // });
 });

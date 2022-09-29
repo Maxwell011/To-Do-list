@@ -4,12 +4,12 @@ let todoList = [];
 // Function to set items to local storage
 // eslint-disable-next-line no-unused-vars
 const addToLocaleStorage = (task) => {
-  todoList = JSON.parse(localStorage.getItem('tasks: '));
+  todoList = JSON.parse(localStorage.getItem('tasks'));
   if (todoList == null) {
     todoList = [];
   }
   todoList.push(task);
-  localStorage.setItem('tasks: ', JSON.stringify(todoList));
+  localStorage.setItem('tasks', JSON.stringify(todoList));
 };
 
 // Function for the add button
@@ -29,7 +29,6 @@ function taskDisplay(todos) {
 
   // Setting Attribute
   taskStatus.setAttribute('type', 'checkbox');
-
   // Display Elements
   taskStatus.checked = todos.completed;
   Input.value = todos.description;
@@ -47,7 +46,7 @@ function taskDisplay(todos) {
 // function to get task from local storage and display from storage
 // eslint-disable-next-line no-unused-vars
 const getTask = () => {
-  todoList = JSON.parse(localStorage.getItem('tasks: '));
+  todoList = JSON.parse(localStorage.getItem('tasks'));
   if (todoList !== null) {
     todoList.forEach((todos) => {
       taskDisplay(todos);
@@ -73,21 +72,20 @@ const taskObjects = (todos) => {
 
 // function to delete a task from the list
 // eslint-disable-next-line no-unused-vars
-const removeTask = (index) => {
-  const tasksElement = document.querySelectorAll('.task');
+const removeTask = (taskElements, index) => {
   todoList.splice(index, 1);
-  tasksElement[index].remove();
-  for (let i = index + 1; i < todoList.length; i += 1) {
-    todoList[i] -= 1;
+  taskElements[index].remove();
+  for (let i = 0; i < todoList.length; i += 1) {
+    todoList[i].index = i;
   }
-  localStorage.setItem('tasks: ', JSON.stringify(todoList));
+  localStorage.setItem('tasks', JSON.stringify(todoList));
 };
 
 // function to modify each task
 // eslint-disable-next-line no-unused-vars
 const editTask = (todos, index) => {
   todoList[index].description = todos;
-  localStorage.setItem('tasks: ', JSON.stringify(todoList));
+  localStorage.setItem('tasks', JSON.stringify(todoList));
 };
 
 const highlightTask = (index) => {
@@ -109,11 +107,12 @@ const highlightTask = (index) => {
 };
 
 // function for the clear completed button, hint: its not functional yet
-const clearCompleted = (index) => {
-  const checkedTask = document.querySelectorAll('.checkedTask');
-  checkedTask.forEach((task) => {
-    if (task.completed === true) {
-      removeTask(index);
+const clearCompleted = () => {
+  const checkedTask = document.querySelectorAll('.checkTask');
+  checkedTask.forEach((task, index) => {
+    if (task.checked === true) {
+      const taskElements = document.querySelectorAll('.task');
+      removeTask(taskElements, index);
     }
   });
 };
