@@ -9,7 +9,7 @@ const addToLocaleStorage = (task) => {
     todoList = [];
   }
   todoList.push(task);
-  localStorage.setItem('tasks:', JSON.stringify(todoList));
+  localStorage.setItem('tasks: ', JSON.stringify(todoList));
 };
 
 // Function for the add button
@@ -37,8 +37,8 @@ function taskDisplay(todos) {
   deleteBtn.innerHTML = '<i class="fa fa-trash" aria-hidden="true"></i>';
 
   // Appending element
-  taskDiv.appendChild(Input);
   taskDiv.appendChild(taskStatus);
+  taskDiv.appendChild(Input);
   taskDiv.appendChild(ellipsis);
   taskDiv.appendChild(deleteBtn);
   tasks.appendChild(taskDiv);
@@ -72,6 +72,59 @@ const taskObjects = (todos) => {
 };
 
 // function to delete a task from the list
+// eslint-disable-next-line no-unused-vars
+const removeTask = (index) => {
+  const tasksElement = document.querySelectorAll('.task');
+  todoList.splice(index, 1);
+  tasksElement[index].remove();
+  for (let i = index + 1; i < todoList.length; i += 1) {
+    todoList[i] -= 1;
+  }
+  localStorage.setItem('tasks: ', JSON.stringify(todoList));
+};
 
-// ! I will have to uncomment this before it will work properly
-// export { taskObjects };
+// function to modify each task
+// eslint-disable-next-line no-unused-vars
+const editTask = (todos, index) => {
+  todoList[index].description = todos;
+  localStorage.setItem('tasks: ', JSON.stringify(todoList));
+};
+
+const highlightTask = (index) => {
+  const moveBtns = document.querySelectorAll('.fa.fa-ellipsis-h');
+  const deleteBtn = document.querySelectorAll('.fa.fa-trash');
+  const activeTasks = document.querySelectorAll('.task.active');
+  const tasksElt = document.querySelectorAll('.task');
+  activeTasks.forEach((activeTask) => {
+    activeTask.classList.remove('active');
+  });
+  moveBtns.forEach((btn, index) => {
+    btn.classList.remove('active');
+    deleteBtn[index].classList.remove('active');
+  });
+
+  tasksElt[index].classList.toggle('active');
+  moveBtns[index].classList.toggle('active');
+  deleteBtn[index].classList.toggle('active');
+};
+
+// function for the clear completed button, hint: its not functional yet
+const clearCompleted = (index) => {
+  const checkedTask = document.querySelectorAll('.checkedTask');
+  checkedTask.forEach((task) => {
+    if (task.completed === true) {
+      removeTask(index);
+    }
+  });
+};
+
+export {
+  taskObjects,
+  clearCompleted,
+  highlightTask,
+  editTask,
+  removeTask,
+  taskDisplay,
+  addToLocaleStorage,
+  getTask,
+};
