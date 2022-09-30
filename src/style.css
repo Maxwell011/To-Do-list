@@ -8,7 +8,12 @@ body {
   box-sizing: border-box;
 }
 
-section {
+* {
+  margin: 0;
+  padding: 0;
+}
+
+#container {
   background-color: white;
   width: 60%;
   margin: auto;
@@ -17,6 +22,26 @@ section {
   border-radius: 10px;
   transform: translateY(10rem);
   position: relative;
+}
+
+#heading,
+#form {
+  padding: 10px;
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 1px solid grey;
+}
+
+#list-ul {
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+}
+
+#form input {
+  outline: none;
+  border: none;
+  background-color: transparent;
 }
 
 .clear-btn {
@@ -30,78 +55,37 @@ section {
 
 .clear-btn:hover {
   color: white;
-  background-color: darksalmon;
+  background-color: brown;
   transition: all 0.5s ease-out;
 }
 
-.heading {
-  padding: 10px;
+.list-li {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  width: 100%;
+  padding: 2px;
 }
 
-.input-item {
-  width: 80%;
-  border: none;
-  padding: 15px;
+.list-input {
+  display: flex;
+  justify-content: space-between;
 }
 
-.input-item:focus {
-  outline: 0;
-  color: brown;
+#input-span,
+#heading-span {
+  color: grey;
+  opacity: 0.7;
 }
 
-.input-item:hover::placeholder {
-  transform: translateX(10px);
-  transition: all 0.5s ease-out;
+.checked {
+  text-decoration: line-through;
 }
 
-.task {
-  margin: 20px;
-}
-
-.task-value {
-  border: 0;
-  font-size: 15px;
-  width: 60%;
-}
-
-.task-value:focus {
-  color: brown;
-  outline: 0;
-  border: 1px solid;
-  border-width: 0 0 1px;
-  border-color: rgba(165, 42, 42, 0.618);
-  transition: all 0.5s ease-out;
-}
-
-#add::placeholder {
-  font-style: italic;
-}
-
-/* the font awesome stylings */
-.fa-trash {
-  float: right;
-}
-
-.fa-trash:hover {
-  color: brown;
-}
-
-.fa-ellipsis-h {
-  float: right;
-  cursor: grab;
-  margin-left: 15px;
-}
-
-.fa-ellipsis-h:active {
-  cursor: grabbing;
-  color: brown;
-}
-
-footer {
-  z-index: 3;
-  background-color: #f4f4f4;
-  padding: 30px;
-  position: relative;
-  text-align: center;
-  transform: translateY(18.35rem);
+.del-btn {
+  cursor: pointer;
+  align-self: flex-end;
+  color: grey;
+  opacity: 0.7;
 }
