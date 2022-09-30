@@ -18,32 +18,28 @@
     />
   </head>
   <body>
-    <!-- Main Heading -->
-    <main>
-      <div class="body">
-        <div class="heading">
-          <h3>Today's To do</h3>
-          <span>
-            <i class="fa fa-refresh" aria-hidden="true"></i>
-          </span>
-        </div>
-        <hr />
-        <!-- end of heading -->
-        <div>
-          <input
-            type="text"
-            class="input-item"
-            id="add"
-            placeholder="Add to your list..."
-          />
-        </div>
-        <hr />
-        <div class="list-container"></div>
-        <div class="clear-all">
-          <button type="submit" class="clear-btn">Clear completed</button>
-        </div>
+    <div id="container">
+      <div id="heading">
+        <h3>Today's To Do</h3>
+        <span id="heading-span"
+          ><i class="fa fa-recycle" aria-hidden="true"></i
+        ></span>
       </div>
-    </main>
-    <script src="../dist/main.js"></script>
+      <form id="form">
+        <input
+          type="text"
+          id="task-input"
+          placeholder="Add to your list...."
+          required
+        />
+        <span id="input-span"
+          ><i class="fa fa-sign-in" id="add-btn" aria-hidden="true"></i
+        ></span>
+      </form>
+      <ul id="list-ul" class="list-wrapper"></ul>
+      <button type="submit" id="btn" class="clear-btn">
+        Clear all completed
+      </button>
+    </div>
   </body>
 </html>

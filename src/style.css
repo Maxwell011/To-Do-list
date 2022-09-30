@@ -3,18 +3,45 @@
 body {
   margin: 0;
   padding: 0;
-  background-color: aquamarine;
+  background-color: coral;
   font-family: 'Inter', sans-serif;
   box-sizing: border-box;
 }
 
-main {
+* {
+  margin: 0;
+  padding: 0;
+}
+
+#container {
   background-color: white;
   width: 60%;
   margin: auto;
-  margin-top: 15%;
+  z-index: 1;
   box-shadow: 0 0 10px #5f5f5f;
   border-radius: 10px;
+  transform: translateY(10rem);
+  position: relative;
+}
+
+#heading,
+#form {
+  padding: 10px;
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 1px solid grey;
+}
+
+#list-ul {
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+}
+
+#form input {
+  outline: none;
+  border: none;
+  background-color: transparent;
 }
 
 .clear-btn {
@@ -27,48 +54,38 @@ main {
 }
 
 .clear-btn:hover {
-  color: black;
-  background-color: cadetblue;
+  color: white;
+  background-color: brown;
   transition: all 0.5s ease-out;
 }
 
-.heading {
-  padding: 10px;
-}
-
-.input-item {
-  width: 80%;
-  border: none;
-  padding: 15px;
-}
-
-.input-item:focus {
-  outline: 0;
-  color: black;
-}
-
-.input-item:hover::placeholder {
-  transform: translateX(10px);
-  transition: all 0.5s ease-out;
-}
-
-.todos {
-  margin: 10px 0;
-}
-
-.todo-div {
+.list-li {
+  list-style: none;
   display: flex;
-  gap: 10px;
+  flex-direction: column;
+  justify-content: space-around;
+  width: 100%;
+  padding: 2px;
 }
 
-.span {
-  color: gray;
-}
-
-.list-group,
-.heading {
+.list-input {
   display: flex;
-  align-items: baseline;
   justify-content: space-between;
-  padding: 5px;
+}
+
+#input-span,
+#heading-span {
+  color: grey;
+  opacity: 0.7;
+}
+
+.checked {
+  text-decoration: line-through;
+}
+
+.del-btn {
+  cursor: pointer;
+  align-self: flex-end;
+  color: grey;
+  opacity: 0.7;
 }
