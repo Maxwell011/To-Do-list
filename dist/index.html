@@ -18,26 +18,28 @@
     />
   <script defer src="main.js"></script></head>
   <body>
-    <section>
-      <div>
-        <div class="heading">
-          <h3>Today's To do</h3>
-        </div>
-        <hr />
-        <div>
-          <input
-            type="text"
-            class="input-item"
-            id="add"
-            placeholder="Type new task and press 'Enter'"
-          />
-        </div>
-        <hr />
-        <div class="list-container"></div>
-        <div class="clear-all">
-          <button type="submit" class="clear-btn">Clear completed</button>
-        </div>
+    <div id="container">
+      <div id="heading">
+        <h3>Today's To Do</h3>
+        <span id="heading-span"
+          ><i class="fa fa-recycle" aria-hidden="true"></i
+        ></span>
       </div>
-    </section>
+      <form id="form">
+        <input
+          type="text"
+          id="task-input"
+          placeholder="Add to your list...."
+          required
+        />
+        <span id="input-span"
+          ><i class="fa fa-sign-in" id="add-btn" aria-hidden="true"></i
+        ></span>
+      </form>
+      <ul id="list-ul" class="list-wrapper"></ul>
+      <button type="submit" id="btn" class="clear-btn">
+        Clear all completed
+      </button>
+    </div>
   </body>
 </html>
