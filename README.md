@@ -38,7 +38,7 @@ npm run build
 
 ## Live Demo (Coming Soon)
 
-[Live Demo Link]()
+[Live Demo Link](https://maxwell011.github.io/To-Do-list/dist/)
 
 ## Author
 
