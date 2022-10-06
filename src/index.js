@@ -1,6 +1,5 @@
 import './style.css';
-import Task from '../modules/task';
-// const Task = require('../modules/task.js');
+import Task from '../modules/task.js';
 
 const task = new Task();
 window.addEventListener('DomContentLoaded', task.showAllTasks());
