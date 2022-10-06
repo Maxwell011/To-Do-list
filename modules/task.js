@@ -1,6 +1,6 @@
 import addEventListenersToTheTaskElements from './eventlisteners.js';
 
-export default class Task {
+module.exports = class Task {
   constructor() {
     this.lists = JSON.parse(localStorage.getItem('list')) || [];
     this.editId = null;
@@ -114,4 +114,4 @@ export default class Task {
     });
     this.updateIndex();
   }
-}
+};
