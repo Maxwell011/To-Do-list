@@ -114,6 +114,4 @@ module.exports = class Task {
     });
     this.updateIndex();
   }
-}
-
-// export default Task;
+};
