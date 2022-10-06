@@ -15,10 +15,5 @@ export default function addEventListenersToTheElements(task) {
     });
   });
 
-  btn.forEach(
-    (item) => item.addEventListener(
-      'click',
-      () => task.deleteTask(item.classList[item.classList.length - 1]),
-    ),
-  );
+  btn.forEach((item) => item.addEventListener('click', () => task.deleteTask(item.classList[item.classList.length - 1])));
 }
