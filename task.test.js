@@ -10,7 +10,7 @@ describe('Add and Remove Testing', () => {
   `;
 
   // eslint-disable-next-line global-require
-  const Task = require('./modules/task');
+  const Task = require('./modules/task.js');
   const task = new Task();
 
   const input = document.getElementById('task-input');

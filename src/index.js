@@ -1,5 +1,6 @@
 import './style.css';
-const Task = require('../modules/task');
+
+const Task = require('../modules/task.js');
 
 const task = new Task();
 window.addEventListener('DomContentLoaded', task.showAllTasks());
