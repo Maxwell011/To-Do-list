@@ -35,4 +35,15 @@ describe('Add and Remove Testing', () => {
     const children = ul.querySelectorAll('li');
     expect(children).toHaveLength(0);
   });
+
+  test('Edit', () => {
+    input.value = "Task thats is to be edited";
+    task.addTasks();
+    task.editTask('description-0', task.lists[0].description);
+    input.value = 'Edited Task';
+    task.addTasks();
+
+    expect(task.lists[0].description).toBe('Edited Task');
+    task.deleteTask('btn-0');
+  })
 });

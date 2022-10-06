@@ -1,3 +1,5 @@
+import Task from "./task";
+
 export default function addEventListenersToTheElements(task) {
   const listWrapper = document.querySelectorAll('.check');
   const completed = document.querySelectorAll('.completed');
